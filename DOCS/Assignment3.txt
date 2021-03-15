@@ -1,0 +1,11 @@
+Dice Roll Application - Assignment 3
+
+Add Tests
+- Like any other applications, it is best to implement tests for this application. The Dice Roll application is expected to generate reports based on the dice rolls simulated. To ensure that the application is working as intended even after changes or new features are applied to it, I've added unit tests & integration tests
+
+Apply HATEOAS
+- The first endpoint should only return the dice simulation data instead of a processed data based on the dice simulation. I would implement it by adding the endpoint that would return the frequency of each sum in the response. Spring HATEOAS can be used to implement this. This will help in making the application loosely coupled.
+
+Save all data
+- In relation to number 2, it was not mentioned in the specification to save each individual roll results (e.g. when I roll a single dice and it shows 5). I believe it is best to save this data to maintain data integrity and it will be helpful for other reports to be generated in the future.
+See DICE_ROLL table. It has a reference to the DICE_ROLL_GROUP table which represents a single dice roll action with N number of dice.
